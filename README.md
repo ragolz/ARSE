@@ -22,8 +22,8 @@ label / resolution / video bitrate / audio bitrate
 1080p / 1920x1080 / 8000kbps / 384kbps
 
 2016-03-03 Update
-New Script Added with the following features mp4-video.bat
-Added support for selecting max video with for mp4 encoding
-Added config file for seting the location of the of FFMPEG executible
-Added config option for setting output directory, all encoded files are saved in the same place (currenlty required needs more work so defaults to current file location when not set.)
-
+New script added with the following features mp4-video.bat
+added support for selecting max video width
+added config file for setting options
+added config file for setting location of FFMPEG
+added config file and options for setting output directory, all encoded files are saved in the same place, currently required, needs more work to add support for using original fille location when not set.
