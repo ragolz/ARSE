@@ -21,6 +21,7 @@ label / resolution / video bitrate / audio bitrate
 720p / 1280x720 / 5000kbps / 384kbps
 1080p / 1920x1080 / 8000kbps / 384kbps
 
+
 2016-03-03 Update
 New Script Added with the following features mp4-video.bat
 Added support for selecting max video with for mp4 encoding
