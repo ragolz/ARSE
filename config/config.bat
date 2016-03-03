@@ -9,14 +9,10 @@ echo " /_/    \_\_|  \_\_____/|______|";
 echo "                                ";
 echo "                                ";
 
-REM Update Variables
+REM UPDATE VARIABLES
 
-REM Set FFMPEG Install Location 
-set ffmpegdir=E:\Media\Media\Projects\ARSE\ffmpeg\
-REM Set Ecoded Output Folder
-set outputdir=E:\Media\Media\Projects\ARSE\Encoded
-
-REM Do NOT Change
-REM Create Varable for file to be encoded
-set inputfile=%1
+REM set ffmpeg install location 
+set ffmpegdir=C:\Users\rags\Downloads\ffmpeg\bin\
+REM set ecoded output folder
+set outputdir=C:\Encoded\
 
