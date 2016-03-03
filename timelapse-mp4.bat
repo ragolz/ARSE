@@ -12,10 +12,14 @@ echo "Input File: "%inputfile%
 echo Starting
 pause
 set /P maxwidth= Width : 
+set /P imagename= name before numbering : 
+set /P imageextension= image extension : 
 REM ffmpeg -i %inputfile% -codec:v libx264 -preset medium -vf scale=1920:-1 -threads 0 -metadata comment="Encoded With ARSE https://github.com/meatpaste/ARSE" -codec:a copy "%~dpn1".1920x.mp4
 REM ffmpeg -i %inputfile% -codec:v libx264 -preset medium -vf scale=1920:-1 -threads 0 -metadata comment="Encoded With ARSE https://github.com/meatpaste/ARSE" -codec:a copy "%outputdir%\%~n1".1920x.mp4
 REM WORKING!! %ffmpegdir%ffmpeg -i %inputfile% -codec:v libx264 -preset medium -vf scale=1920:-1 -threads 0 -metadata comment="Encoded With ARSE https://github.com/meatpaste/ARSE" -codec:a copy "%outputdir%\%~n1".1920x.mp4
-%ffmpegdir%ffmpeg -i %inputfile% -codec:v libx264 -preset medium -vf scale=%maxwidth%:-1 -threads 0 -metadata comment="Encoded With ARSE https://github.com/meatpaste/ARSE" -codec:a copy "%outputdir%%~n1".%maxwidth%x.mp4
+REM %ffmpegdir%ffmpeg -i %inputfile% -codec:v libx264 -preset medium -vf scale=%maxwidth%:-1 -threads 0 -metadata comment="Encoded With ARSE https://github.com/meatpaste/ARSE" -codec:a copy "%outputdir%%~n1".%maxwidth%x.mp4
+%ffmpegdir%ffmpeg -pattern_type glob -f image2 -r 30 -i %inputfile%\%imagename%*.%imageextension% -vcodec libx264 -preset medium -crf 22 -threads 0 -vf scale=1920:-1 -r 15 -metadata comment="Encoded With ARSE https://github.com/meatpaste/ARSE" "%outputdir%%~n1".%maxwidth%x.mp4
+
 pause
 REM ffmpeg -f image2 -i %*.JPG video.mp4
 REM ffmpeg -i output.mp4 -codec:v libx264 -preset slow -vf scale=-1:480 -threads 0 -codec:a copy test.html5.mp4
