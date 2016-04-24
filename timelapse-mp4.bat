@@ -33,3 +33,4 @@ REM ffmpeg -start_number 1620 -r 10 -i IMG_%04d.JPG -vcodec libx264 -preset medi
 
 REM Input 30FPS
 REM ffmpeg -start_number 1620 -r 30 -i IMG_%04d.JPG -vcodec libx264 -preset medium -crf 22 -threads 0 -vf scale=1920:-1 -r 15 -metadata title="Katie's Party 2016-01-23 Imagzilla.co.uk" Party_2016-01-23_30fps.mp4
+REM %ffmpegdir%ffmpeg -i %inputfile% -ab 320k -map_metadata 0 -id3v2_version 3 "%outputdir%%~n1".mp3
